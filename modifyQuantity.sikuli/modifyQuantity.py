@@ -1,11 +1,11 @@
 from sikuli import *
-def modifyQuantity( dir, app):
-    #cartAdd = find(Pattern("1376433625109.png").similar(0.91))
-    #click( cartAdd )
-    #wait("1376433659558.png", 60)
-    #cartView = find("1376433305224.png")
-    #click( cartView )
-    #wait( "1376434734521.png", 60 )
+def modifyQuantity( dir ):
+    cartAdd = find(Pattern("1376433625109.png").similar(0.91))
+    click( cartAdd )
+    wait("1376433659558.png", 60)
+    cartView = find("1376433305224.png")
+    click( cartView )
+    wait( "1376434734521.png", 60 )
     quantity = find( "1376434008176.png" )
     quantity.click( "1376434072666.png" )
     type( Key.DELETE )
@@ -26,3 +26,5 @@ def modifyQuantity( dir, app):
             popup("Price changed")
     else:
             popup("Price not changed")
+
+modifyQuantity( "C:\Users\Public\Pictures\SikluiScreenshots" )
