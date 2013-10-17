@@ -2,16 +2,7 @@ from sikuli import *
 import os
 import shutil
 
-def changeQuantity( dir, app ):
-    #cartAdd = find(Pattern("1377738345282.png").similar(0.91))
-    #click( cartAdd )
-    #wait( "1377738400458.png", 60)
-    #cartAdd = find(Pattern("1377738345282.png").similar(0.91))
-    #click( cartAdd )
-    #wait( "1377738400458.png", 60)
-    #cartView =find("1377738462749.png")
-    #click( cartView )
-    #wait("1377738496959.png", 60)
+def changeQuantity0( dir, app ):
     screenshotsDir = dir
     img = capture(SCREEN)
     shutil.move(img, os.path.join(screenshotsDir, "changeQuantityToZero-Start.png"))

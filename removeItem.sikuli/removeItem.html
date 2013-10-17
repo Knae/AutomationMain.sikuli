@@ -74,13 +74,12 @@
 <span class="kw">import</span> os
 <span class="kw">import</span> shutil
 
-<span class="kw">def</span> modifyQuantity( dir, app):
+<span class="kw">def</span> removeItem( dir, app):
 
     <span class="kw">def</span> addItem():
         <span class="skw">click</span>(Pattern(<img src="1378249278462.png" />).similar(<span class="dig">0.80</span>))
         <span class="skw">wait</span>( <span class="dig">5</span> )
         <span class="skw">wait</span>(Pattern(<img src="1378249376462.png" />).similar(<span class="dig">0.90</span>),<span class="dig">60</span> )
-
     screenshotsDir = dir
     additem()
     additem()
@@ -91,14 +90,12 @@
     img = <span class="skw">capture</span>(SCREEN)
     shutil.move(img, os.path.join(screenshotsDir, <img src="removeItem-Start.png" />))
     prev = app.Region(<span class="dig">701</span>,<span class="dig">415</span>,<span class="dig">442</span>,<span class="dig">59</span>).text()
-    <span class="cmt">#prev = name.text()
-</span>    <span class="skw">popup</span>( prev )
+    <span class="skw">popup</span>( prev )
     remove = app.Region(<span class="dig">701</span>,<span class="dig">415</span>,<span class="dig">442</span>,<span class="dig">59</span>).right( <span class="dig">300</span> ).<span class="skw">find</span>(Pattern(<img src="1378855370487.png" />).similar(<span class="dig">0.80</span>))
     <span class="skw">click</span>( remove )
     <span class="skw">wait</span>( <span class="dig">10</span> )
     current = app.Region(<span class="dig">701</span>,<span class="dig">415</span>,<span class="dig">442</span>,<span class="dig">59</span>).text()
-    <span class="cmt">#popup( current )
-</span>    <span class="kw">if</span> prev!=current:
+    <span class="kw">if</span> prev!=current:
         img = <span class="skw">capture</span>(SCREEN)
         shutil.move(img, os.path.join(screenshotsDir, <img src="removeItem-Success.png" />))
     <span class="kw">else</span>:

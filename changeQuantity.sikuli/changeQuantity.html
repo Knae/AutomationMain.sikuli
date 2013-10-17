@@ -74,17 +74,8 @@
 <span class="kw">import</span> os
 <span class="kw">import</span> shutil
 
-<span class="kw">def</span> changeQuantity( dir, app ):
-    <span class="cmt">#cartAdd = find(Pattern("1377738345282.png").similar(0.91))
-</span>    <span class="cmt">#click( cartAdd )
-</span>    <span class="cmt">#wait( "1377738400458.png", 60)
-</span>    <span class="cmt">#cartAdd = find(Pattern("1377738345282.png").similar(0.91))
-</span>    <span class="cmt">#click( cartAdd )
-</span>    <span class="cmt">#wait( "1377738400458.png", 60)
-</span>    <span class="cmt">#cartView =find("1377738462749.png")
-</span>    <span class="cmt">#click( cartView )
-</span>    <span class="cmt">#wait("1377738496959.png", 60)
-</span>    screenshotsDir = dir
+<span class="kw">def</span> changeQuantity0( dir, app ):
+    screenshotsDir = dir
     img = <span class="skw">capture</span>(SCREEN)
     shutil.move(img, os.path.join(screenshotsDir, <img src="changeQuantityToZero-Start.png" />))
     r = Region(<span class="dig">665</span>,<span class="dig">412</span>,<span class="dig">493</span>,<span class="dig">201</span>)

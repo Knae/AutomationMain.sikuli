@@ -13,4 +13,4 @@ def emptyCart( dir ):
     if exists( "1378032917376.png"):
         shutil.move(img, os.path.join(screenshotsDir, "emptyCartDetection-Success.png"))
     else:
-        shutil.move(img, os.path.join(screenshotsDir, "emptyCartDetection-Success.png"))
+        shutil.move(img, os.path.join(screenshotsDir, "emptyCartDetection-Fail.png"))
